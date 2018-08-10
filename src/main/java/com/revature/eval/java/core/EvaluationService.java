@@ -554,9 +554,9 @@ public class EvaluationService {
 		public static String decode(String string) {
 			string = string.replace(" ", "");
 			char[] letters = string.toCharArray();
-			for(int i = 0; letters.length; i++) {
-				if (letter[i] >= 'a' && letters[i] <= 'z') {
-					letters[i] = (char)();
+			for(int i = 0; i < letters.length; i++) {
+				if (letters[i] >= 'a' && letters[i] <= 'z') {
+					letters[i] = (char)(122 - (letters[i] - 97));
 				}
 				string = String.valueOf(letters);
 			}
